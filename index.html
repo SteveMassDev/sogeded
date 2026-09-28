@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#12803f">
+  <meta name="description" content="SOGEDED assure le dégraissage et la décontamination de matériel industriel exposé aux huiles, graisses et hydrocarbures.">
+  <title>SOGEDED — Assainissement de matériel industriel</title>
+  <script>const WHATSAPP_NUMBER = "XXXXXXXXXXXX";</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#ffffff; --surface:#f4f9f5; --surface-2:#e6f2ea; --ink:#0f2419; --muted:#4a5f53;
+      --line:#dce8e0; --green:#12803f; --green-hover:#0e6a33; --green-deep:#0a4a27; --green-bright:#3ecf74; --on-green:#ffffff;
+      --s1:.375rem; --s2:.75rem; --s3:1rem; --s4:1.5rem; --s5:2rem;
+      --s6:3rem; --s7:4.5rem; --s8:6rem; --s9:8rem;
+      --r-sm:.5rem; --r:.75rem; --r-lg:1.25rem;
+      --shadow:0 1px 2px rgba(15,36,25,.05),0 12px 32px -16px rgba(15,36,25,.22);
+      --gutter:clamp(1rem,4vw,3rem); --max:1240px;
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    section[id]{scroll-margin-top:5.5rem}
+    body{margin:0;min-width:320px;background:var(--bg);color:var(--ink);font:400 1rem/1.6 'Manrope',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+    ::selection{background:var(--surface-2);color:var(--green-deep)}
+    a{color:inherit;text-decoration:none} button,input{font:inherit} svg{display:block}
+    :focus-visible{outline:3px solid var(--green-bright);outline-offset:3px;border-radius:var(--r-sm)}
+    h1,h2,h3,p{margin-top:0} h1,h2,h3{font-weight:800;letter-spacing:-.03em;line-height:1.08}
+    .wrap{width:min(100% - 2 * var(--gutter),var(--max));margin-inline:auto}
+    .mono{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+    .accent{color:var(--green)}
+    .skip{position:absolute;left:-999px;top:var(--s2);z-index:50;padding:var(--s2) var(--s3);background:var(--green);color:var(--on-green);border-radius:var(--r-sm)}
+    .skip:focus{left:var(--s3)}
+
+    /* Boutons */
+    .button{display:inline-flex;align-items:center;justify-content:center;gap:var(--s2);min-height:3rem;padding:var(--s2) var(--s4);border:1px solid var(--green);border-radius:var(--r-sm);background:var(--green);color:var(--on-green);font-weight:700;font-size:.95rem;line-height:1.2;transition:background .2s,border-color .2s,transform .2s}
+    .button:hover{background:var(--green-hover);border-color:var(--green-hover);transform:translateY(-1px)}
+    .button svg{width:1.15rem;height:1.15rem;flex:none}
+    .button--ghost{background:var(--bg);border-color:var(--line);color:var(--ink)}
+    .button--ghost:hover{background:var(--surface);border-color:var(--green);color:var(--green)}
+
+    /* En-tête */
+    .site-header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.92);border-bottom:1px solid var(--line);backdrop-filter:saturate(1.4) blur(10px)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;gap:var(--s4);min-height:4.5rem}
+    .brand{display:flex;align-items:center;gap:var(--s2);flex:none}
+    .brand-mark{display:grid;place-items:center;width:2.5rem;height:2.5rem;border-radius:var(--r-sm);background:var(--green);color:var(--on-green)}
+    .brand-mark svg{width:1.4rem;height:1.4rem}
+    .brand-name{font-weight:800;font-size:1.25rem;letter-spacing:.02em;line-height:1}
+    .brand-name small{display:block;margin-top:.3rem;color:var(--muted);font:500 .6rem/1 'IBM Plex Mono',monospace;letter-spacing:.1em}
+    .nav{display:flex;gap:var(--s1);font-weight:600;font-size:.92rem}
+    .nav a{padding:var(--s1) var(--s2);border-radius:var(--r-sm);color:var(--muted);transition:color .2s,background .2s}
+    .nav a:hover{color:var(--green);background:var(--surface)}
+    .header-button{min-height:2.75rem;padding-inline:var(--s3);white-space:nowrap}
+
+    /* Hero */
+    .hero{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--bg) 0%,var(--surface) 100%);border-bottom:1px solid var(--line)}
+    .hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:var(--s7);padding-block:var(--s8)}
+    .eyebrow{display:inline-flex;align-items:center;gap:var(--s2);padding:var(--s1) var(--s3) var(--s1) var(--s2);border:1px solid var(--surface-2);border-radius:999px;background:var(--surface-2);color:var(--green-deep);font-weight:700;font-size:.82rem}
+    .eyebrow::before{content:'';width:.5rem;height:.5rem;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(18,128,63,.18)}
+    .hero h1{margin:var(--s4) 0 var(--s4);font-size:clamp(2.75rem,6vw,5rem)}
+    .hero-lead{max-width:34rem;margin-bottom:var(--s5);color:var(--muted);font-size:clamp(1.05rem,1.4vw,1.2rem)}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:var(--s2)}
+    .checks{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s4);margin:var(--s5) 0 0;padding:0;list-style:none;color:var(--muted);font-weight:600;font-size:.9rem}
+    .checks li,.benefits li{display:flex;align-items:center;gap:var(--s2)}
+    .tick{display:grid;place-items:center;flex:none;width:1.4rem;height:1.4rem;border-radius:50%;background:var(--surface-2);color:var(--green)}
+    .tick svg{width:.8rem;height:.8rem}
+
+    /* Comparateur avant / après */
+    .visual-board{border:1px solid var(--line);border-radius:var(--r-lg);background:var(--bg);box-shadow:var(--shadow);overflow:hidden}
+    .board-top{display:flex;justify-content:space-between;gap:var(--s2);padding:var(--s3) var(--s4);border-bottom:1px solid var(--line);color:var(--muted)}
+    .board-top strong{color:var(--green);font-weight:500}
+    .machine-window{position:relative;aspect-ratio:1.13;overflow:hidden;background:var(--surface)}
+    .machine-window::before{content:'';position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:40px 40px;opacity:.7}
+    .machine-svg{position:absolute;inset:0;width:100%;height:100%}
+    .dirty-overlay{clip-path:inset(0 calc(100% - var(--split,52%)) 0 0)}
+    .split-line{position:absolute;z-index:2;top:0;bottom:0;left:var(--split,52%);width:3px;margin-left:-1.5px;background:var(--green);pointer-events:none}
+    .split-line::after{content:'⟷';position:absolute;top:50%;left:50%;display:grid;place-items:center;width:2.75rem;height:2.75rem;transform:translate(-50%,-50%);border:3px solid var(--green);border-radius:50%;background:var(--bg);color:var(--green);font-size:1.2rem;font-weight:700;box-shadow:var(--shadow)}
+    .window-label{position:absolute;z-index:2;bottom:var(--s3);padding:.3rem .6rem;border-radius:999px;background:var(--bg);box-shadow:var(--shadow)}
+    .window-label--left{left:var(--s3);color:#7a4b12}.window-label--right{right:var(--s3);color:var(--green)}
+    .board-bottom{display:flex;align-items:center;gap:var(--s3);padding:var(--s3) var(--s4);border-top:1px solid var(--line)}
+    .board-bottom label{color:var(--muted);white-space:nowrap}
+    .board-bottom input{width:100%;min-width:0;height:2rem;margin:0;accent-color:var(--green);cursor:ew-resize}
+
+    /* Sections */
+    .section{padding-block:var(--s9)}
+    .section-heading{max-width:44rem;margin-bottom:var(--s6)}
+    .section h2,.sectors h2{margin-bottom:var(--s3);font-size:clamp(2rem,4vw,3.25rem)}
+    .section-heading p,.lead{margin:0;color:var(--muted);font-size:1.08rem}
+
+    .treatments{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s3);margin:0;padding:0;list-style:none}
+    .treatment{display:flex;gap:var(--s3);padding:var(--s4);border:1px solid var(--line);border-radius:var(--r);background:var(--bg);transition:border-color .2s,background .2s,transform .2s}
+    .treatment:hover{border-color:var(--green);background:var(--surface);transform:translateY(-2px)}
+    .treatment-number{display:grid;place-items:center;flex:none;width:2.5rem;height:2.5rem;border-radius:var(--r-sm);background:var(--surface-2);color:var(--green)}
+    .treatment h3{margin:0 0 .25rem;font-size:1.15rem;letter-spacing:-.01em}
+    .treatment p{margin:0;color:var(--muted);font-size:.9rem}
+
+    .method{background:var(--surface);border-block:1px solid var(--line)}
+    .method-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1fr);gap:var(--s7)}
+    .method-intro{position:sticky;top:7rem;align-self:start}
+    .method-intro p{max-width:28rem}
+    .steps{margin:0;padding:0;list-style:none}
+    .step{position:relative;display:grid;grid-template-columns:3rem 1fr;gap:var(--s4);padding-bottom:var(--s5)}
+    .step:not(:last-child)::before{content:'';position:absolute;top:3.25rem;bottom:.25rem;left:1.5rem;width:2px;margin-left:-1px;background:var(--surface-2)}
+    .step-number{display:grid;place-items:center;width:3rem;height:3rem;border-radius:50%;background:var(--green);color:var(--on-green);font-weight:800}
+    .step-body{padding:var(--s4);border:1px solid var(--line);border-radius:var(--r);background:var(--bg)}
+    .step h3{margin-bottom:var(--s1);font-size:1.2rem;letter-spacing:-.01em}
+    .step p{margin:0;color:var(--muted)}
+
+    .why-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1fr);gap:var(--s7);align-items:start}
+    .why-copy>p{margin-bottom:var(--s5);font-size:clamp(1.1rem,1.6vw,1.35rem);line-height:1.55}
+    .benefits{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--s2);margin:0;padding:0;list-style:none}
+    .benefits li{padding:var(--s3);border:1px solid var(--line);border-radius:var(--r);background:var(--surface);font-weight:600}
+
+    .sectors{padding-bottom:var(--s9)}
+    .sector-list{display:flex;flex-wrap:wrap;gap:var(--s2);margin:0;padding:0;list-style:none}
+    .sector{display:inline-flex;align-items:center;gap:var(--s2);padding:var(--s2) var(--s4) var(--s2) var(--s2);border:1px solid var(--line);border-radius:999px;background:var(--bg);font-weight:700;font-size:1.05rem;transition:border-color .2s,background .2s}
+    .sector:hover{border-color:var(--green);background:var(--surface)}
+    .sector-number{display:grid;place-items:center;width:2rem;height:2rem;border-radius:50%;background:var(--surface-2);color:var(--green);font-size:.65rem}
+
+    .final-cta{padding-bottom:var(--s9)}
+    .cta-card{display:grid;grid-template-columns:1fr auto;align-items:center;gap:var(--s6);padding:clamp(var(--s5),5vw,var(--s7));border-radius:var(--r-lg);background:var(--green-deep);color:var(--on-green)}
+    .cta-card h2{margin-bottom:var(--s3);font-size:clamp(2rem,4vw,3.25rem)}
+    .cta-card p{max-width:36rem;margin:0;color:#cfe5d7;font-size:1.08rem}
+    .cta-card .button{min-height:3.5rem;background:var(--bg);border-color:var(--bg);color:var(--green-deep);white-space:nowrap}
+    .cta-card .button:hover{background:var(--surface-2);border-color:var(--surface-2)}
+
+    .site-footer{padding-block:var(--s6) var(--s4);background:var(--surface);border-top:1px solid var(--line)}
+    .footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:var(--s5)}
+    .footer-grid p{max-width:22rem;margin:var(--s2) 0 0;color:var(--muted);font-size:.92rem}
+    .footer-label{color:var(--green)}
+    .footer-bottom{display:flex;justify-content:space-between;gap:var(--s3);margin-top:var(--s6);padding-top:var(--s3);border-top:1px solid var(--line);color:var(--muted)}
+
+    .mobile-cta{display:none}
+    .js .reveal{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease}
+    .js .reveal.is-visible{opacity:1;transform:none}
+
+    @media(max-width:1024px){
+      .nav{display:none}
+      .treatments{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:768px){
+      :root{--s9:4.5rem;--s8:3.5rem;--s7:2.5rem}
+      body{padding-bottom:5rem}
+      .header-inner{min-height:4rem}.header-button{display:none}
+      .hero-grid,.method-grid,.why-grid,.cta-card{grid-template-columns:1fr}
+      .hero-grid{gap:var(--s6)}
+      .method-intro{position:static}
+      .cta-card .button{justify-self:start}
+      .footer-grid{grid-template-columns:1fr 1fr}.footer-grid>:first-child{grid-column:1/-1}
+      .mobile-cta{position:fixed;z-index:40;right:var(--gutter);bottom:.75rem;left:var(--gutter);display:flex;min-height:3.25rem;box-shadow:0 8px 24px -8px rgba(10,74,39,.5)}
+    }
+    @media(max-width:520px){
+      .hero-actions .button{width:100%}
+      .treatments,.benefits{grid-template-columns:1fr}
+      .step{grid-template-columns:2.5rem 1fr;gap:var(--s3)}
+      .step-number{width:2.5rem;height:2.5rem}.step:not(:last-child)::before{left:1.25rem;top:2.75rem}
+      .board-top{flex-direction:column;gap:.25rem}
+      .cta-card .button{width:100%;white-space:normal}
+      .footer-grid{grid-template-columns:1fr}.footer-grid>:first-child{grid-column:auto}
+      .footer-bottom{flex-direction:column}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}.js .reveal{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M20.5 3.5A11.8 11.8 0 0 0 2.3 18L.8 23.2l5.3-1.4A11.8 11.8 0 0 0 20.5 3.5ZM12 21a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.2.8.9-3.1-.2-.4A9.8 9.8 0 1 1 12 21Zm5.5-7.2c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.1-.2.2-.4.2-.7.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.7l.5-.5.3-.5c.1-.2 0-.4 0-.6L9 6.5c-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.3 3.1c.2.2 2.2 3.4 5.3 4.7.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="m3 8.5 3.2 3L13 4.5"/></symbol>
+    <symbol id="i-drop" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.5c-.3 0-.6.2-.8.4C9.4 5.3 5 11 5 14.8A7 7 0 0 0 19 14.8c0-3.8-4.4-9.5-6.2-11.9a1 1 0 0 0-.8-.4Zm-2.6 12.7a.9.9 0 0 1 1 .8 2.4 2.4 0 0 0 2.2 2.1.9.9 0 1 1-.2 1.8A4.2 4.2 0 0 1 8.6 16a.9.9 0 0 1 .8-.8Z"/></symbol>
+  </svg>
+
+  <a class="skip" href="#accueil">Aller au contenu</a>
+
+  <header class="site-header"><div class="wrap header-inner">
+    <a class="brand" href="#accueil" aria-label="SOGEDED, retour à l’accueil"><span class="brand-mark" aria-hidden="true"><svg><use href="#i-drop"/></svg></span><span class="brand-name">SOGEDED<small>ASSAINISSEMENT INDUSTRIEL</small></span></a>
+    <nav class="nav" aria-label="Navigation principale"><a href="#traitements">Ce que nous traitons</a><a href="#methode">Notre méthode</a><a href="#enjeux">Les enjeux</a><a href="#secteurs">Secteurs</a></nav>
+    <a class="button header-button whatsapp-link" href="#contact" target="_blank" rel="noopener noreferrer" aria-label="Demander un devis sur WhatsApp (nouvel onglet)"><svg aria-hidden="true"><use href="#i-wa"/></svg>Demander un devis</a>
+  </div></header>
+
+  <main id="accueil">
+    <section class="hero" aria-labelledby="hero-title"><div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Dégraissage · Décontamination industrielle</span>
+        <h1 id="hero-title">L’huile s’arrête <span class="accent">ici.</span></h1>
+        <p class="hero-lead">Nous assainissons pièces, machines et cuves exposées aux huiles, graisses et hydrocarbures. Un matériel traité avec méthode, prêt pour la suite de vos opérations.</p>
+        <div class="hero-actions">
+          <a class="button whatsapp-link" href="#contact" target="_blank" rel="noopener noreferrer" aria-label="Demander un devis sur WhatsApp (nouvel onglet)"><svg aria-hidden="true"><use href="#i-wa"/></svg>Demander un devis sur WhatsApp</a>
+          <a class="button button--ghost" href="#methode">Voir notre méthode</a>
+        </div>
+        <ul class="checks">
+          <li><span class="tick" aria-hidden="true"><svg><use href="#i-check"/></svg></span>Pièces & équipements</li>
+          <li><span class="tick" aria-hidden="true"><svg><use href="#i-check"/></svg></span>Huiles & hydrocarbures</li>
+        </ul>
+      </div>
+
+      <div class="visual-board" style="--split:52%">
+        <div class="board-top mono"><span>Fig. 01 / Vue de principe</span><strong>Traitement de surface</strong></div>
+        <div class="machine-window" role="img" aria-label="Illustration d’une vanne industrielle : à gauche encrassée par l’huile, à droite après dégraissage. Le curseur permet de comparer les deux états.">
+          <svg class="machine-svg" viewBox="0 0 600 530" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><pattern id="hatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" x2="0" y1="0" y2="9" stroke="#8fa89a" stroke-width="2"/></pattern></defs>
+            <g fill="none" stroke="#b5ccbe"><circle cx="300" cy="265" r="213" stroke-dasharray="3 8"/><circle cx="300" cy="265" r="233" stroke-dasharray="1 12"/><path d="M300 22v65M300 443v65M57 265h65M478 265h65"/></g>
+            <g stroke="#6f857a" stroke-width="3"><path d="M40 220h115v90H40zM445 220h115v90H445z" fill="#a9bbb1"/><path d="M48 228h100v74H48zM452 228h100v74H452z" fill="url(#hatch)"/><path d="M135 199h330v132H135z" fill="#8ea397"/><path d="M145 208h310v114H145z" fill="#d6e2db"/><path d="M252 113h96v102h-96z" fill="#9fb3a8"/><path d="M264 120h72v95h-72z" fill="#dce7e0"/><path d="M274 77h52v39h-52z" fill="#9fb3a8"/><path d="M201 72h198v18H201z" fill="#dce7e0"/><path d="M230 58h140v14H230z" fill="#a9bbb1"/><path d="M240 325h120v44H240z" fill="#9fb3a8"/><path d="M224 370h152v21H224z" fill="#dce7e0"/><circle cx="300" cy="265" r="118" fill="#8ea397"/><circle cx="300" cy="265" r="102" fill="#e6efe9"/><circle cx="300" cy="265" r="82" fill="#9aaea3"/><circle cx="300" cy="265" r="66" fill="#d3e0d8"/><path d="M257 240h86v51h-86z" fill="#879c90"/><path d="M277 226h46v78h-46zM259 248h82v35h-82z" fill="#f4f9f5"/></g>
+            <g fill="#5e7468" stroke="#ffffff" stroke-width="2"><circle cx="300" cy="157" r="8"/><circle cx="376" cy="189" r="8"/><circle cx="408" cy="265" r="8"/><circle cx="376" cy="341" r="8"/><circle cx="300" cy="373" r="8"/><circle cx="224" cy="341" r="8"/><circle cx="192" cy="265" r="8"/><circle cx="224" cy="189" r="8"/></g>
+            <g fill="none" stroke="#ffffff" stroke-width="2" opacity=".8"><path d="M157 214h286M157 316h286M280 124h40M243 383h114"/></g>
+          </svg>
+          <svg class="machine-svg dirty-overlay" viewBox="0 0 600 530" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g fill="#4a3620" opacity=".85"><path d="M39 222h108v21l-20-5-18 9-21-7-20 8-29-9zM41 293l27-8 21 5 24-12 35 8v23H40zM149 210l34 15 23-5 18 13 31-5 27 16-16 19-23-7-17 15-35-13-42 4z"/><path d="M205 324l35-22 25 8 21-11 31 15 40-17 24 25zM252 119l27 8 20-6 37 9v38l-26-12-18 17-40-11zM201 72h195v11l-46 5-31-4-29 6-34-6-55 2z"/><path d="M196 199c40-57 141-73 195-4l-22 22c-42-47-108-48-150-1zM200 299c47 68 149 77 205 3l-31-19c-39 44-114 45-146-3z"/><path d="M255 242c26-26 68-28 92 4l-15 16-53-8-17 22zM240 331l27 14 34-12 40 16 19-16v36H240z"/></g><g fill="#2b2118" opacity=".8"><circle cx="190" cy="264" r="14"/><circle cx="224" cy="341" r="11"/><circle cx="301" cy="158" r="10"/><circle cx="374" cy="190" r="13"/><path d="M125 289c23-11 40-7 52 5v26h-52z"/></g><g fill="none" stroke="#7a5a22" stroke-width="7" stroke-linecap="round" opacity=".8"><path d="M132 205c-9 26-6 49 7 62M224 171c27-16 57-20 85-18M354 304c-24 19-54 25-91 17M271 116c3 22 3 39-3 53"/></g><g fill="#1f1812" opacity=".85"><path d="M172 314c8 5 11 13 7 26l-5 17-5-17zM251 358c7 4 10 13 7 27l-5 13-5-15zM99 300c7 4 9 9 7 19l-4 10-4-11z"/></g></svg>
+          <span class="split-line" aria-hidden="true"></span>
+          <span class="window-label window-label--left mono">Avant</span><span class="window-label window-label--right mono">Après</span>
+        </div>
+        <div class="board-bottom"><label class="mono" for="compare">Comparer</label><input id="compare" type="range" min="15" max="85" value="52" aria-label="Déplacer la séparation entre l’état encrassé et l’état dégraissé"></div>
+      </div>
+    </div></section>
+
+    <section class="section" id="traitements" aria-labelledby="treatments-title"><div class="wrap">
+      <div class="section-heading reveal"><h2 id="treatments-title">Chaque surface <span class="accent">compte.</span></h2><p>Des petits composants aux grands équipements : le traitement s’adapte au matériel et à la nature des dépôts.</p></div>
+      <ul class="treatments">
+        <li class="treatment reveal"><span class="treatment-number mono">01</span><div><h3>Pièces & outillage</h3><p>Graisses · Huiles</p></div></li>
+        <li class="treatment reveal"><span class="treatment-number mono">02</span><div><h3>Machines & équipements</h3><p>Dépôts industriels</p></div></li>
+        <li class="treatment reveal"><span class="treatment-number mono">03</span><div><h3>Cuves & réservoirs</h3><p>Résidus hydrocarburés</p></div></li>
+        <li class="treatment reveal"><span class="treatment-number mono">04</span><div><h3>Bacs de rétention</h3><p>Traces & dépôts huileux</p></div></li>
+        <li class="treatment reveal"><span class="treatment-number mono">05</span><div><h3>Filtres</h3><p>Encrassement</p></div></li>
+        <li class="treatment reveal"><span class="treatment-number mono">06</span><div><h3>Résidus huileux</h3><p>Huiles · Hydrocarbures</p></div></li>
+      </ul>
+    </div></section>
+
+    <section class="section method" id="methode" aria-labelledby="method-title"><div class="wrap method-grid">
+      <div class="method-intro reveal"><h2 id="method-title">Une méthode, <span class="accent">à chaque étape.</span></h2><p class="lead">Un traitement suivi, de l’examen du matériel jusqu’à sa restitution. Les opérations sont définies selon l’état et le type de contamination.</p></div>
+      <ol class="steps">
+        <li class="step reveal"><span class="step-number" aria-hidden="true">1</span><div class="step-body"><h3>Réception & diagnostic</h3><p>Identifier le matériel, les zones à traiter et la nature des dépôts avant d’engager les opérations.</p></div></li>
+        <li class="step reveal"><span class="step-number" aria-hidden="true">2</span><div class="step-body"><h3>Dégraissage & décontamination</h3><p>Éliminer huiles, graisses et résidus d’hydrocarbures selon les contraintes du support.</p></div></li>
+        <li class="step reveal"><span class="step-number" aria-hidden="true">3</span><div class="step-body"><h3>Contrôle</h3><p>Vérifier les surfaces traitées et repérer les zones qui demandent une reprise.</p></div></li>
+        <li class="step reveal"><span class="step-number" aria-hidden="true">4</span><div class="step-body"><h3>Gestion des résidus</h3><p>Collecter et orienter les résidus issus du traitement selon leur nature et les exigences applicables.</p></div></li>
+        <li class="step reveal"><span class="step-number" aria-hidden="true">5</span><div class="step-body"><h3>Restitution</h3><p>Remettre le matériel traité à disposition, avec les informations utiles pour la suite des opérations.</p></div></li>
+      </ol>
+    </div></section>
+
+    <section class="section" id="enjeux" aria-labelledby="why-title"><div class="wrap why-grid">
+      <div class="reveal"><h2 id="why-title">Le propre est aussi <span class="accent">une exigence.</span></h2></div>
+      <div class="why-copy reveal"><p>Un dépôt huileux complique l’inspection, la manutention et la remise en service. Assainir le matériel aide à maîtriser les risques, à respecter les exigences environnementales applicables et à préserver les équipements.</p>
+        <ul class="benefits">
+          <li><span class="tick" aria-hidden="true"><svg><use href="#i-check"/></svg></span>Sécurité des interventions</li>
+          <li><span class="tick" aria-hidden="true"><svg><use href="#i-check"/></svg></span>Maîtrise des résidus</li>
+          <li><span class="tick" aria-hidden="true"><svg><use href="#i-check"/></svg></span>Durée de vie du matériel</li>
+          <li><span class="tick" aria-hidden="true"><svg><use href="#i-check"/></svg></span>Réutilisation des équipements</li>
+        </ul>
+      </div>
+    </div></section>
+
+    <section class="sectors" id="secteurs" aria-labelledby="sectors-title"><div class="wrap">
+      <div class="section-heading reveal"><h2 id="sectors-title">Là où le matériel travaille.</h2></div>
+      <ul class="sector-list reveal">
+        <li class="sector"><span class="sector-number mono">01</span>Pétrole & gaz</li>
+        <li class="sector"><span class="sector-number mono">02</span>Mécanique</li>
+        <li class="sector"><span class="sector-number mono">03</span>Transport</li>
+        <li class="sector"><span class="sector-number mono">04</span>Industrie</li>
+        <li class="sector"><span class="sector-number mono">05</span>Maintenance</li>
+        <li class="sector"><span class="sector-number mono">06</span>Énergie</li>
+      </ul>
+    </div></section>
+
+    <section class="final-cta" id="contact" aria-labelledby="contact-title"><div class="wrap"><div class="cta-card reveal">
+      <div><h2 id="contact-title">Votre matériel est encrassé ? Parlons-en.</h2><p>Décrivez le type de matériel et les dépôts à traiter. Nous pourrons échanger sur votre besoin.</p></div>
+      <a class="button whatsapp-link" href="#contact" target="_blank" rel="noopener noreferrer" aria-label="Demander un devis sur WhatsApp (nouvel onglet)"><svg aria-hidden="true"><use href="#i-wa"/></svg>Demander un devis sur WhatsApp</a>
+    </div></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="wrap">
+    <div class="footer-grid">
+      <div><a class="brand" href="#accueil" aria-label="SOGEDED, retour à l’accueil"><span class="brand-mark" aria-hidden="true"><svg><use href="#i-drop"/></svg></span><span class="brand-name">SOGEDED</span></a><p>Assainissement et dégraissage de matériel industriel exposé aux huiles et hydrocarbures.</p></div>
+      <div><span class="footer-label mono">Zone d’intervention</span><p>[À COMPLÉTER]</p></div>
+      <div><span class="footer-label mono">Informations légales</span><p>Mentions légales : [À COMPLÉTER]<br>Coordonnées : [À COMPLÉTER]</p></div>
+    </div>
+    <div class="footer-bottom mono"><span>© <span id="year">2026</span> SOGEDED</span><span>Nettoyer · Contrôler · Restituer</span></div>
+  </div></footer>
+
+  <a class="button mobile-cta whatsapp-link" href="#contact" target="_blank" rel="noopener noreferrer" aria-label="Demander un devis sur WhatsApp (nouvel onglet)"><svg aria-hidden="true"><use href="#i-wa"/></svg>Demander un devis sur WhatsApp</a>
+
+  <script>
+    const message = "Bonjour, je souhaite un devis pour l'assainissement de matériel. Type de matériel : …";
+    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+    document.querySelectorAll('.whatsapp-link').forEach(link => { link.href = whatsappUrl; });
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const compare = document.getElementById('compare');
+    compare.addEventListener('input', () => { compare.closest('.visual-board').style.setProperty('--split', `${compare.value}%`); });
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('js');
+      const observer = new IntersectionObserver(entries => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); } }); }, { threshold: .08, rootMargin: '0px 0px -24px 0px' });
+      document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
+    }
+  </script>
+</body>
+</html>
